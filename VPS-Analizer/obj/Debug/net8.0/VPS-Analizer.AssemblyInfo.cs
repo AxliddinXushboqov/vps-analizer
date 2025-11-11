@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("VPS-Analizer")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+32863c67f7fe0debaddc024a9ae829832954664a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6ac245bc25a5a83841e2d24dd87961fca1b18328")]
 [assembly: System.Reflection.AssemblyProductAttribute("VPS-Analizer")]
 [assembly: System.Reflection.AssemblyTitleAttribute("VPS-Analizer")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
