@@ -7,10 +7,8 @@ namespace MeneMarket.Services.Foundations.Users
     {
         private readonly IStorageBroker storageBroker;
 
-        public UserService(IStorageBroker storageBroker)
-        {
+        public UserService(IStorageBroker storageBroker) =>
             this.storageBroker = storageBroker;
-        }
 
         public async ValueTask<User> AddUserAsync(User user) =>
             await this.storageBroker.InsertUserAsync(user);

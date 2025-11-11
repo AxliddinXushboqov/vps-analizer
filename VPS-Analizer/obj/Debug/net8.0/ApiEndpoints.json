@@ -22,7 +22,7 @@
   {
     "ContainingType": "VPS_Analizer.Controllers.UserController",
     "Method": "AddUser",
-    "RelativePath": "api/User",
+    "RelativePath": "api/User/AddVPS",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -47,8 +47,34 @@
   },
   {
     "ContainingType": "VPS_Analizer.Controllers.UserController",
+    "Method": "DeleteUser",
+    "RelativePath": "api/User/DeleteVPSById",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "VpsId",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "VPS_Analizer.Models.Users.User",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "VPS_Analizer.Controllers.UserController",
     "Method": "GetUsersList",
-    "RelativePath": "api/User",
+    "RelativePath": "api/User/GetAllVPS",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -56,6 +82,58 @@
     "ReturnTypes": [
       {
         "Type": "System.Linq.IQueryable\u00601[[VPS_Analizer.Models.Users.User, VPS-Analizer, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "VPS_Analizer.Controllers.UserController",
+    "Method": "PutUser",
+    "RelativePath": "api/User/PutVPS",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "user",
+        "Type": "VPS_Analizer.Models.Users.User",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "VPS_Analizer.Models.Users.User",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "VPS_Analizer.Controllers.UserController",
+    "Method": "PutUserSource",
+    "RelativePath": "api/User/PutVPSSource",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "client",
+        "Type": "VPS_Analizer.Models.Clients.Client",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "VPS_Analizer.Models.Users.User",
         "MediaTypes": [
           "text/plain",
           "application/json",

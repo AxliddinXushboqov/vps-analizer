@@ -1,11 +1,7 @@
-﻿namespace VPS_Analizer.Models.Users
+﻿namespace VPS_Analizer.Models.Clients
 {
-    public class User
+    public class Client
     {
-        public Guid UserId { get; set; }
-        public string VpsId { get; set; }
-        public string VpsPassword { get; set; }
-        public DateTime LastCheckedTime { get; set; }
         public string ClientLogin { get; set; }
         public string AccountBalance { get; set; }
         public string AccountEquity { get; set; }
