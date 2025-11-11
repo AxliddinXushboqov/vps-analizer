@@ -1,0 +1,6 @@
+@VPS_Analizer_HostAddress = http://localhost:5118
+
+GET {{VPS_Analizer_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
