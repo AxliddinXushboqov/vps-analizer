@@ -39,6 +39,8 @@ namespace VPS_Analizer.Services.Orchestrations.Users
                 selectedUser.InvestorStatus = client.InvestorStatus;
                 selectedUser.ClientStatus = client.ClientStatus;
                 selectedUser.ProblemDescription = client.ProblemDescription;
+                selectedUser.ServerRam = client.ServerRam;
+                selectedUser.ServerCpu = client.ServerCpu;
                 selectedUser.LastCheckedTime = DateTime.Now;
 
                 return await this.userService.ModifyUserAsync(selectedUser);

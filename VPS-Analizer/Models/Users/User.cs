@@ -6,6 +6,8 @@
         public string VpsId { get; set; }
         public string VpsPassword { get; set; }
         public DateTime LastCheckedTime { get; set; }
+        public string ServerRam { get; set; }
+        public string ServerCpu { get; set; }
         public string ClientLogin { get; set; }
         public string AccountBalance { get; set; }
         public string AccountEquity { get; set; }

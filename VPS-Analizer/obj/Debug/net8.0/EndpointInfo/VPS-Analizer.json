@@ -275,6 +275,14 @@
           "investorStatus": {
             "type": "boolean"
           },
+          "serverRam": {
+            "type": "string",
+            "nullable": true
+          },
+          "serverCpu": {
+            "type": "string",
+            "nullable": true
+          },
           "clientStatus": {
             "type": "boolean"
           },
@@ -303,6 +311,14 @@
           "lastCheckedTime": {
             "type": "string",
             "format": "date-time"
+          },
+          "serverRam": {
+            "type": "string",
+            "nullable": true
+          },
+          "serverCpu": {
+            "type": "string",
+            "nullable": true
           },
           "clientLogin": {
             "type": "string",
