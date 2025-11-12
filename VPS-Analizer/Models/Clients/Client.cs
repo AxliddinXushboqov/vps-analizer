@@ -2,6 +2,7 @@
 {
     public class Client
     {
+        public string VpsId { get; set; }
         public string ClientLogin { get; set; }
         public string AccountBalance { get; set; }
         public string AccountEquity { get; set; }

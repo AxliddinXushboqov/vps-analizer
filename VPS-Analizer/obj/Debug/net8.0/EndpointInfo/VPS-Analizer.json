@@ -260,6 +260,10 @@
       "Client": {
         "type": "object",
         "properties": {
+          "vpsId": {
+            "type": "string",
+            "nullable": true
+          },
           "clientLogin": {
             "type": "string",
             "nullable": true

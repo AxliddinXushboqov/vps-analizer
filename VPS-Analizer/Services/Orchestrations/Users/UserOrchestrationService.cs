@@ -29,11 +29,12 @@ namespace VPS_Analizer.Services.Orchestrations.Users
         {
             User? selectedUser = this.userService
                 .RetrieveAllUsers()
-                .Where(u => u.ClientLogin == client.ClientLogin)
+                .Where(u => u.VpsId == client.VpsId)
                 .FirstOrDefault();
 
             if (selectedUser != null)
             {
+                selectedUser.ClientLogin = client.ClientLogin;
                 selectedUser.AccountBalance = client.AccountBalance;
                 selectedUser.AccountEquity = client.AccountEquity;
                 selectedUser.InvestorStatus = client.InvestorStatus;
