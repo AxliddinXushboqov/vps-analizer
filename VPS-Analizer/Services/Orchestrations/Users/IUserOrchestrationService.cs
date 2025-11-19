@@ -5,7 +5,7 @@ namespace VPS_Analizer.Services.Orchestrations.Users
 {
     public interface IUserOrchestrationService
     {
-        ValueTask<User> AddUserAsync(User user);
+        ValueTask<User> AddUserAsync(List<User> user);
         IQueryable<User> GetAllUsers();
         ValueTask<User> UpdateUserSourceAsync(Client client);
         ValueTask<User> UpdateUserAsync(User user);

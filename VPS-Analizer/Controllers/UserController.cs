@@ -15,8 +15,8 @@ namespace VPS_Analizer.Controllers
             this.userOrchestrationService = userOrchestrationService;
 
         [HttpPost("AddVPS")]
-        public async ValueTask<ActionResult<User>> AddUser(User user) =>
-            await this.userOrchestrationService.AddUserAsync(user);
+        public async ValueTask<ActionResult<User>> AddUser(List<User> users) =>
+            await this.userOrchestrationService.AddUserAsync(users);
 
         [HttpGet("GetAllVPS")]
         public async ValueTask<IQueryable<User>> GetUsersList() =>

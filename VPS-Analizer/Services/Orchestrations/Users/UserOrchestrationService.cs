@@ -11,18 +11,21 @@ namespace VPS_Analizer.Services.Orchestrations.Users
         public UserOrchestrationService(IUserService userService) =>
             this.userService = userService;
 
-        public async ValueTask<User> AddUserAsync(User user)
+        public async ValueTask<User> AddUserAsync(List<User> recieveUser)
         {
-            IQueryable<User> users = this.userService.RetrieveAllUsers();
+            foreach (var item in recieveUser)
+            {
+                IQueryable<User> users = this.userService.RetrieveAllUsers();
+                User? existingUser = users
+                    .Where(u => u.ClientLogin == item.ClientLogin || u.VpsId == item.VpsId)
+                    .FirstOrDefault();
+                if (existingUser == null)
+                    await this.userService.AddUserAsync(item);
+                else
+                    throw new Exception($"User already exists: {item.ClientLogin} or VPS ID: {item.VpsId}");
+            }
 
-            User? existingUser = users
-                .Where(u => u.ClientLogin == user.ClientLogin || u.VpsId == user.VpsId)
-                .FirstOrDefault();
-
-            if (existingUser == null)
-                return await this.userService.AddUserAsync(user);
-            else
-                throw new Exception($"User already exists: {user.ClientLogin} or VPS ID: {user.VpsId}");
+            return recieveUser.Last();
         }
 
         public async ValueTask<User> UpdateUserSourceAsync(Client client)
@@ -37,8 +40,7 @@ namespace VPS_Analizer.Services.Orchestrations.Users
                 selectedUser.ClientLogin = client.ClientLogin;
                 selectedUser.AccountBalance = client.AccountBalance;
                 selectedUser.AccountEquity = client.AccountEquity;
-                selectedUser.InvestorStatus = client.InvestorStatus;
-                selectedUser.ClientStatus = client.ClientStatus;
+                selectedUser.InvestorStatus = client.RobotStatus;
                 selectedUser.ProblemDescription = client.ProblemDescription;
                 selectedUser.ServerRam = client.ServerRam;
                 selectedUser.ServerCpu = client.ServerCpu;
