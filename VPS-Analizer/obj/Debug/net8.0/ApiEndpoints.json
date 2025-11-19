@@ -28,8 +28,8 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "user",
-        "Type": "VPS_Analizer.Models.Users.User",
+        "Name": "users",
+        "Type": "System.Collections.Generic.List\u00601[[VPS_Analizer.Models.Users.User, VPS-Analizer, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "IsRequired": true
       }
     ],

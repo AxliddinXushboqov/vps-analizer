@@ -43,17 +43,26 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/User"
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/User"
+                }
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/User"
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/User"
+                }
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/User"
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/User"
+                }
               }
             }
           }
@@ -276,7 +285,7 @@
             "type": "string",
             "nullable": true
           },
-          "investorStatus": {
+          "robotStatus": {
             "type": "boolean"
           },
           "serverRam": {
@@ -286,9 +295,6 @@
           "serverCpu": {
             "type": "string",
             "nullable": true
-          },
-          "clientStatus": {
-            "type": "boolean"
           },
           "problemDescription": {
             "type": "string",
@@ -336,10 +342,7 @@
             "type": "string",
             "nullable": true
           },
-          "investorStatus": {
-            "type": "boolean"
-          },
-          "clientStatus": {
+          "robotStatus": {
             "type": "boolean"
           },
           "problemDescription": {

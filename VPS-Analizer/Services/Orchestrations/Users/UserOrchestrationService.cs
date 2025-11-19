@@ -40,7 +40,7 @@ namespace VPS_Analizer.Services.Orchestrations.Users
                 selectedUser.ClientLogin = client.ClientLogin;
                 selectedUser.AccountBalance = client.AccountBalance;
                 selectedUser.AccountEquity = client.AccountEquity;
-                selectedUser.InvestorStatus = client.RobotStatus;
+                selectedUser.RobotStatus = client.RobotStatus;
                 selectedUser.ProblemDescription = client.ProblemDescription;
                 selectedUser.ServerRam = client.ServerRam;
                 selectedUser.ServerCpu = client.ServerCpu;
