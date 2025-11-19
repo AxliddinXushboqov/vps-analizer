@@ -21,8 +21,6 @@ namespace VPS_Analizer.Services.Orchestrations.Users
                     .FirstOrDefault();
                 if (existingUser == null)
                     await this.userService.AddUserAsync(item);
-                else
-                    throw new Exception($"User already exists: {item.ClientLogin} or VPS ID: {item.VpsId}");
             }
 
             return recieveUser.Last();
