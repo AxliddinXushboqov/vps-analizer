@@ -83,5 +83,17 @@ namespace VPS_Analizer.Services.Orchestrations.Users
                 throw new Exception($"VPS not found: {user.VpsId}");
         }
 
+        public ValueTask<User> GetUserByVpsIdAsync(string VpsId)
+        {
+            User? selectedUser = this.userService
+                .RetrieveAllUsers()
+                .Where(u => u.VpsId == VpsId)
+                .FirstOrDefault();
+
+            if (selectedUser != null)
+                return ValueTask.FromResult(selectedUser);
+            else
+                throw new Exception($"VPS not found: {VpsId}");
+        }
     }
 }

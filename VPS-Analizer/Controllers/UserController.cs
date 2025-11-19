@@ -22,6 +22,10 @@ namespace VPS_Analizer.Controllers
         public async ValueTask<IQueryable<User>> GetUsersList() =>
             this.userOrchestrationService.GetAllUsers();
 
+        [HttpGet("GetVPSById")]
+        public async ValueTask<ActionResult<User>> GetUserById(string VpsId) =>
+            await this.userOrchestrationService.GetUserByVpsIdAsync(VpsId);
+
         [HttpPut("PutVPSSource")]
         public async ValueTask<ActionResult<User>> PutUserSource(Client client) =>
             await this.userOrchestrationService.UpdateUserSourceAsync(client);

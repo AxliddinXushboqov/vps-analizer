@@ -93,6 +93,32 @@
   },
   {
     "ContainingType": "VPS_Analizer.Controllers.UserController",
+    "Method": "GetUserById",
+    "RelativePath": "api/User/GetVPSById",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "VpsId",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "VPS_Analizer.Models.Users.User",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "VPS_Analizer.Controllers.UserController",
     "Method": "PutUser",
     "RelativePath": "api/User/PutVPS",
     "HttpMethod": "PUT",
