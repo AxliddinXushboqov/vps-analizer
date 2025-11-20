@@ -42,7 +42,7 @@ namespace VPS_Analizer.Services.Orchestrations.Users
                 selectedUser.ProblemDescription = client.ProblemDescription;
                 selectedUser.ServerRam = client.ServerRam;
                 selectedUser.ServerCpu = client.ServerCpu;
-                selectedUser.LastCheckedTime = DateTime.Now;
+                selectedUser.LastCheckedTime = DateTime.UtcNow;
 
                 return await this.userService.ModifyUserAsync(selectedUser);
             }
