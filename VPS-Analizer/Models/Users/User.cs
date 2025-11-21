@@ -4,6 +4,7 @@
     {
         public Guid UserId { get; set; }
         public string VpsId { get; set; }
+        public string VpsIp { get; set; }
         public string VpsPassword { get; set; }
         public DateTime LastCheckedTime { get; set; }
         public string ServerRam { get; set; }

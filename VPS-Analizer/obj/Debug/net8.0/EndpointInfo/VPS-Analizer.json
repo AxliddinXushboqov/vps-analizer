@@ -352,6 +352,10 @@
             "type": "string",
             "nullable": true
           },
+          "vpsIp": {
+            "type": "string",
+            "nullable": true
+          },
           "vpsPassword": {
             "type": "string",
             "nullable": true
